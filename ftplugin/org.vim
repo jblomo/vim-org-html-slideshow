@@ -1,4 +1,23 @@
 """""""""""" Settings
+setlocal wrap
+setlocal showbreak=»\ 
+setlocal comments+=b:+,n:*
+setlocal formatlistpat=^\\s*[0-9+*]\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatoptions-=c formatoptions+=rn
+
+" new slide
+inoremap <s-CR> <ESC>o<ESC>ddi<CR>*  :slide:<ESC>Bhi
+nmap <LocalLeader>s  o<ESC>ddi<CR>*  :slide:<ESC>Bhi
+
+" new bullets
+inoremap <c-CR> <ESC>A<CR><ESC>:s/[+*]/ /eg<CR>A + 
+nmap <LocalLeader>b  A<CR><ESC>:s/[+*]/ /eg<CR>A + 
+
+" new notes
+inoremap <s-c-CR> <ESC>o<ESC>0C**  :notes:<ESC>Bhi
+nmap <LocalLeader>n    o<ESC>0C**  :notes:<ESC>Bhi
+
+"""""""""""" Configuration
 let g:org_export_babel_evaluate = 1
 
 if !exists('g:org_command_for_emacsclient') && (has('unix') || has('macunix'))
