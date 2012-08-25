@@ -1,0 +1,9 @@
+* vim-org-html-slideshow :slide:
+  - org-mode syntax highlighting
+  - mapi commands for creating new slides, lists
+  - KISS: Only support minimal org-mode subset for making slides
+
+* References
+  - [[https://github.com/relevance/org-html-slideshow][relevance/org-html-slideshow]]
+  - [[https://github.com/jceb/vim-orgmode][jceb/vim-orgmode]]
+  - [[https://github.com/hsitz/VimOrganizer][VimOrganizer]]
