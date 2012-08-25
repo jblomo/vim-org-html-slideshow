@@ -1,3 +1,9 @@
+""""
+" Syntax highlighting from vim-orgmod
+" https://github.com/jceb/vim-orgmode
+" LICENSE: GPL3
+""/
+
 " Headings
 if !exists('g:org_heading_highlight_colors')
 	let g:org_heading_highlight_colors = ['Title', 'Constant', 'Identifier', 'Statement', 'PreProc', 'Type', 'Special']

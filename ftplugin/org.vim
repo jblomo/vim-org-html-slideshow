@@ -1,3 +1,12 @@
+""""
+" vim-org-html-slideshow
+" https://github.com/jblomo/vim-org-html-slideshow
+"
+" Export functionality from VimOrganizer
+" https://github.com/hsitz/VimOrganizer
+"
+""/
+
 """""""""""" Settings
 setlocal wrap
 setlocal showbreak=»\ 
@@ -6,8 +15,8 @@ setlocal formatlistpat=^\\s*[0-9+*]\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatoptions-=c formatoptions+=rn
 
 " new slide
-inoremap <s-CR> <ESC>o<ESC>ddi<CR>*  :slide:<ESC>Bhi
-nmap <LocalLeader>s  o<ESC>ddi<CR>*  :slide:<ESC>Bhi
+inoremap <s-CR> <ESC>o<ESC>0C<CR>*  :slide:<ESC>Bhi
+nmap <LocalLeader>s  o<ESC>0C<CR>*  :slide:<ESC>Bhi
 
 " new bullets
 inoremap <c-CR> <ESC>A<CR><ESC>:s/[+*]/ /eg<CR>A + 
@@ -31,7 +40,7 @@ else
 endif
 
 """"""""""""" Export
-
+nmap <LocalLeader>x  :call OrgExportDashboard()<CR>
 function! OrgExportDashboard()
     if s:OrgHasEmacsVar() == 0
        return
