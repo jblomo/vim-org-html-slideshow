@@ -26,6 +26,10 @@ nmap <LocalLeader>b  A<CR><ESC>:s/[+*]/ /eg<CR>A +
 inoremap <s-c-CR> <ESC>o<ESC>0C**  :notes:<ESC>Bhi
 nmap <LocalLeader>n    o<ESC>0C**  :notes:<ESC>Bhi
 
+" HTML and code sections
+nmap <LocalLeader>h  o<ESC>0C#+BEGIN_HTML<ESC>o#+END_HTML<ESC>O
+nmap <LocalLeader>c  o<ESC>0C#+begin_src python<ESC>o#+end_src<ESC>O
+
 """""""""""" Configuration
 let g:org_export_babel_evaluate = 1
 
